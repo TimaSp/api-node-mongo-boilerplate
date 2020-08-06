@@ -10,7 +10,7 @@ const app = express();
 const mongoFun = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://ararat:maxt9leo123@cluster0.skcm1.gcp.mongodb.net/test?retryWrites=true&w=majority`,
+      "mongodb+srv://tima:tima123@cluster0.da64q.mongodb.net/quantum-bot?retryWrites=true&w=majority",
       { useNewUrlParser: true, useUnifiedTopology: true }
     );
     console.log("Succsessfuly conected");
