@@ -45,7 +45,7 @@ app.use("/api/v1/notifications", require("./src/routes/notifcations.js"));
 //   res.status(500).send({ error: true, message: "Something went wrong" });
 // });
 app.get("/", (req, res) => {
-  res.status(200).send("yes");
+  res.status(200).send({ succeed: true, message: "Api is on fire" });
 });
 
 http.createServer({}, app).listen(process.env.PORT);
