@@ -6,8 +6,36 @@ const notification = new Schema({
     default: "Not",
   },
   AMOUNT: {
-    type: Number,
-    default: 0,
+    type: String,
+    default: "",
+  },
+  intid: {
+    type: String,
+    default: "",
+  },
+  MERCHANT_ORDER_ID: {
+    type: String,
+    default: "",
+  },
+  P_EMAIL: {
+    type: String,
+    default: "",
+  },
+  P_PHONE: {
+    type: String,
+    default: "",
+  },
+  CUR_ID: {
+    type: String,
+    default: "",
+  },
+  SIGN: {
+    type: String,
+    default: "",
+  },
+  us_key: {
+    type: String,
+    default: "",
   },
 });
 
