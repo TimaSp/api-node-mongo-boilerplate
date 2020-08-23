@@ -11,6 +11,8 @@ module.exports = {
         req.body.us_chatid,
         "https://t.me/joinchat/AAAAAEYhQ_adRfCR84G19Q"
       );
+      bot.telegram.getChat(req.body.us_chatid);
+
       return res.status(200).send(req.body);
     } catch (error) {
       return res.status(400).send({ error: true, message: error });
