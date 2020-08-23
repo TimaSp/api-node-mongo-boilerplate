@@ -30,7 +30,7 @@ paymentsMenu.interact("Генерация ссылки оплаты", "unique", 
     const secretWord = "qu044679";
 
     paymentsMenu.url(
-      `💰${Number(amount[0])} USD`,
+      `💰${amount[0]} USD`,
       `https://www.free-kassa.ru/merchant/cash.php?m=${merchantId}&oa=${
         amount[0]
       }&o=${orderId}&s=${md5(
