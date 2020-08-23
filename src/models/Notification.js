@@ -33,7 +33,11 @@ const notification = new Schema({
     type: String,
     default: "",
   },
-  us_key: {
+  us_id: {
+    type: String,
+    default: "",
+  },
+  us_username: {
     type: String,
     default: "",
   },

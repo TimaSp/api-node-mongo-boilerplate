@@ -3,6 +3,7 @@ const Notification = require("../models/Notification");
 module.exports = {
   createNotification: async (req, res) => {
     try {
+      console.log(req.body);
       const not = await Notification.create(req.body);
       return res.status(200).send("YES");
     } catch (error) {
