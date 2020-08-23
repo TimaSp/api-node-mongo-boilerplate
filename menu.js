@@ -35,7 +35,7 @@ paymentsMenu.interact("Генерация ссылки оплаты", "unique", 
         amount[0]
       }&o=${orderId}&s=${md5(
         `${merchantId}:${Number(amount[0])}:${secretWord}:${orderId}`
-      )}&lang=ru&us_id=${ctx.from.id}&us_username${ctx.from.username}`
+      )}&lang=ru&us_id=${ctx.from.id}&us_username=${ctx.from.username}`
     );
     return ".";
   },

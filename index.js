@@ -48,7 +48,7 @@ app.use((req, res, next) => {
 
 app.use("/api/v1/notifications", require("./src/routes/notifcations.js"));
 // const ID = () => "_" + Math.random().toString(36).substr(2, 9);
-const bot = new Telegraf(process.env.BOT_TOKEN);
+const bot = new Telegraf("1395654541:AAHo57AlfP-5vi38-Bz4wzAjg2XpK5xUI2Q");
 
 // const menuTemplate = new MenuTemplate(
 //   (ctx) =>
