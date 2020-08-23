@@ -7,7 +7,7 @@ module.exports = {
     try {
       console.log(req.body);
       const not = await Notification.create(req.body);
-      bot.sendMessage(req.body.us_chatid, "ссылка на вип канал");
+      // bot.sendMessage(req.body.us_chatid, "ссылка на вип канал");
       return res.status(200).send(req.body);
     } catch (error) {
       return res.status(400).send({ error: true, message: error });
