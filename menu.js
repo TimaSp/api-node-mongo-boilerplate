@@ -24,7 +24,6 @@ const paymentsMenu = new MenuTemplate("Оплата");
 
 paymentsMenu.interact("Генерация ссылки оплаты", "unique", {
   do: async (ctx) => {
-    console.log(ctx.from);
     const amount = ctx.match[1].split(" ");
     const merchantId = "220514";
     const orderId = ID();
@@ -35,7 +34,9 @@ paymentsMenu.interact("Генерация ссылки оплаты", "unique", 
         amount[0]
       }&o=${orderId}&s=${md5(
         `${merchantId}:${Number(amount[0])}:${secretWord}:${orderId}`
-      )}&lang=ru&us_id=${ctx.from.id}&us_username=${ctx.from.username}`
+      )}&lang=ru&us_id=${ctx.from.id}&us_username=${
+        ctx.from.username
+      }&us_chatid=${ctx.chat.id}`
     );
     return ".";
   },

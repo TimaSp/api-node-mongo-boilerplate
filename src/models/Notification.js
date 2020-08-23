@@ -41,6 +41,10 @@ const notification = new Schema({
     type: String,
     default: "",
   },
+  us_chatid: {
+    type: String,
+    default: "",
+  },
 });
 
 module.exports = model("Notification", notification);

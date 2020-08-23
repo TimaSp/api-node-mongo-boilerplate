@@ -47,64 +47,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/v1/notifications", require("./src/routes/notifcations.js"));
-// const ID = () => "_" + Math.random().toString(36).substr(2, 9);
 const bot = new Telegraf("1395654541:AAHo57AlfP-5vi38-Bz4wzAjg2XpK5xUI2Q");
-
-// const menuTemplate = new MenuTemplate(
-//   (ctx) =>
-//     `
-//                         Привет, ${ctx.from.first_name}!
-
-//   💰💰💰💰Мы команда Quantum Forex, мы поможем тебе заработать вместе с нами!💰💰💰💰`
-// );
-
-// const merchatId = "220514";
-// const orderId = ID();
-// const secretWord = "qu044679";
-// const submenuTemplate = new MenuTemplate(`
-// Этот бот является приватным инвайтером команды Quantum Forex. Оплата подписки производится автоматически. Выберите Ваш тариф 👇.
-
-// Вам будет выставлен счет, эквивалентный стоимости подписки на канал в долларах.
-
-// 💳 1 неделя - 15$
-// 💳 1 месяц - 50$
-// 💳 3 месяца - 100$
-// `);
-
-// submenuTemplate.url(
-//   "💰$15 USD/ 1 Неделя",
-//   `https://www.free-kassa.ru/merchant/cash.php?m=${merchatId}&oa=${0}&o=${orderId}&s=${md5(
-//     `${merchatId}:${15}:${secretWord}:${orderId}`
-//   )}&lang=ru`
-// );
-// submenuTemplate.url(
-//   "💰$50 USD/ 1 Месяц ",
-//   `https://www.free-kassa.ru/merchant/cash.php?m=${merchatId}&oa=${50}&o=${orderId}&s=${md5(
-//     `${merchatId}:${50}:${secretWord}:${orderId}`
-//   )}&lang=ru`,
-//   {
-//     joinLastRow: true,
-//   }
-// );
-// submenuTemplate.url(
-//   "💰$100 USD/ 3 Месяца",
-//   `https://www.free-kassa.ru/merchant/cash.php?m=${merchatId}&oa=${100}&o=${orderId}&s=${md5(
-//     `${merchatId}:${100}:${secretWord}:${orderId}`
-//   )}&lang=ru`,
-//   {
-//     joinLastRow: true,
-//   }
-// );
-
-// submenuTemplate.manualRow(createBackMainMenuButtons());
-
-// menuTemplate.submenu("Тариф", "unique", submenuTemplate);
-
-// const menuMiddleware = new MenuMiddleware("/", menuTemplate);
-// bot.command("start", (ctx) => menuMiddleware.replyToContext(ctx));
-// bot.use(menuMiddleware);
-// bot.launch();
-
 const menuMiddleware = require("./menu");
 
 bot.start((ctx) => {
