@@ -4,6 +4,7 @@ const {
   createBackMainMenuButtons,
 } = require("telegraf-inline-menu");
 const md5 = require("md5");
+const { Telegraf } = require("telegraf");
 const menu = new MenuTemplate(
   (ctx) => `Привет, ${ctx.from.first_name}!
 
@@ -28,7 +29,7 @@ paymentsMenu.interact("Генерация ссылки оплаты", "unique", 
     const merchantId = "220514";
     const orderId = ID();
     const secretWord = "qu044679";
-
+    console.log(ctx);
     paymentsMenu.url(
       `💰${Number(amount[0])} USD`,
       `https://www.free-kassa.ru/merchant/cash.php?m=${merchantId}&oa=${
@@ -49,7 +50,7 @@ paymentsMenu.manualRow(createBackMainMenuButtons());
 
 tarifsMenu.chooseIntoSubmenu(
   "payment",
-  ["0.7 USD", "50 USD", "100 USD"],
+  ["15 USD", "50 USD", "100 USD"],
   paymentsMenu
 );
 
