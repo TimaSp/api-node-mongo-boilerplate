@@ -29,7 +29,7 @@ paymentsMenu.interact("Генерация ссылки оплаты", "unique", 
     const merchantId = "220514";
     const orderId = ID();
     const secretWord = "qu044679";
-    console.log(ctx);
+
     paymentsMenu.url(
       `💰${Number(amount[0])} USD`,
       `https://www.free-kassa.ru/merchant/cash.php?m=${merchantId}&oa=${
